@@ -1,0 +1,406 @@
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:11:51.721841
+Total registros: 514
+Cuadrantes coincidentes: 169
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:12:51.806674
+Total registros: 448
+Cuadrantes coincidentes: 192
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:18:41.000114
+Total registros: 448
+Cuadrantes coincidentes: 192
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:19:43.750211
+Total registros: 514
+Cuadrantes coincidentes: 169
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:20:59.287141
+Total registros: 550
+Cuadrantes coincidentes: 176
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:24:07.241476
+Total registros: 545
+Cuadrantes coincidentes: 180
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:31:17.217647
+Total registros: 514
+Cuadrantes coincidentes: 169
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:42:17.831102
+Total registros: 448
+Cuadrantes coincidentes: 192
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:47:01.766283
+Total registros: 514
+Cuadrantes coincidentes: 169
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 14:51:31.609775
+Total registros: 529
+Cuadrantes coincidentes: 160
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 15:26:47.261967
+Total registros: 448
+Cuadrantes coincidentes: 192
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 15:28:30.127801
+Total registros: 529
+Cuadrantes coincidentes: 160
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 15:29:07.406167
+Total registros: 477
+Cuadrantes coincidentes: 196
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 15:29:37.879332
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-30 15:31:33.918983
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-31 14:53:42.637766
+Total registros: 448
+Cuadrantes coincidentes: 192
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-31 14:54:05.744247
+Total registros: 477
+Cuadrantes coincidentes: 196
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-31 14:55:35.793068
+Total registros: 599
+Cuadrantes coincidentes: 175
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-31 14:57:31.095272
+Total registros: 999
+Cuadrantes coincidentes: 233
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-10-31 15:18:03.996579
+Total registros: 448
+Cuadrantes coincidentes: 192
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-05 16:07:37.998726
+Total registros: 448
+Cuadrantes coincidentes: 192
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-05 16:22:16.439159
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-05 16:22:26.168675
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-05 16:22:43.491368
+Total registros: 999
+Cuadrantes coincidentes: 242
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-05 16:29:24.548955
+Total registros: 999
+Cuadrantes coincidentes: 242
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-05 16:32:36.589229
+Total registros: 999
+Cuadrantes coincidentes: 242
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-05 17:01:43.199410
+Total registros: 999
+Cuadrantes coincidentes: 242
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-05 17:02:39.009344
+Total registros: 999
+Cuadrantes coincidentes: 242
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-05 17:03:00.975573
+Total registros: 999
+Cuadrantes coincidentes: 242
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-06 13:44:38.029331
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-06 13:44:43.755535
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-07 14:56:49.542892
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-07 14:56:59.317101
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-07 15:10:03.593584
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-07 15:44:48.438847
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-07 15:45:11.515525
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-07 19:54:41.035121
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-07 20:26:40.509509
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-07 20:26:49.449243
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-07 20:28:52.210492
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:15:48.150713
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:34:22.286373
+Total registros: 448
+Cuadrantes coincidentes: 192
+Cuadrantes solo en hurtos:
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:37:46.001309
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:38:00.622818
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:38:09.894003
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:40:30.171143
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:40:52.440847
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:44:29.821644
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:45:50.348060
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:54:51.963736
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 09:55:56.954113
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 13:46:02.205844
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 13:50:30.256416
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
+
+=== Nueva Consulta ===
+Fecha/Hora: 2024-11-14 13:56:05.543578
+Total registros: 999
+Cuadrantes coincidentes: 228
+Cuadrantes solo en hurtos:
+SIN DATO
+
