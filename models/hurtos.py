@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from datetime import date
 import pandas as pd
 from fastapi import HTTPException
-from utils.athena_rds_client import athena_query as ejecutar_query
+from db.athena_rds_client import athena_query as ejecutar_query
 
 
 class HURTOS(ABC):

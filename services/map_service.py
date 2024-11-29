@@ -3,7 +3,7 @@ from shapely.geometry import Polygon
 import geopandas as gpd
 import pandas as pd
 import numpy as np
-from utils.athena_rds_client import ejecutar_query_rds
+from db.athena_rds_client import ejecutar_query_rds
 #from utils.athena_rds_client_ssh import ejecutar_query_rds
 
 class MapService:

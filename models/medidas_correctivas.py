@@ -1,7 +1,7 @@
 from datetime import date
 import pandas as pd
 from fastapi import HTTPException
-from utils.athena_rds_client import athena_query
+from db.athena_rds_client import athena_query
 
 class MedidasCorrectivas:
     def __init__(self):

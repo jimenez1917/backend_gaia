@@ -1,5 +1,5 @@
 #from utils.athena_rds_client_ssh import ejecutar_query_rds
-from utils.athena_rds_client import ejecutar_query_rds
+from db.athena_rds_client import ejecutar_query_rds
 import pandas as pd
 from fastapi import HTTPException
 

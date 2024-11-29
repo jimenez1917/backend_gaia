@@ -6,7 +6,7 @@ import numpy as np
 import re
 from fastapi import HTTPException
 from pyproj import Transformer
-from utils.athena_rds_client import athena_query as ejecutar_query
+from db.athena_rds_client import athena_query as ejecutar_query
 
 
 class HOMICIDIOS(ABC):

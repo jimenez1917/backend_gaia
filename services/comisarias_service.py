@@ -1,6 +1,6 @@
 import pandas as pd
 #from utils.athena_rds_client_ssh import ejecutar_query_rds
-from utils.athena_rds_client import ejecutar_query_rds
+from db.athena_rds_client import ejecutar_query_rds
 
 
 class ComisariasService:

@@ -3,7 +3,7 @@ import geopandas as gpd
 from typing import Dict, Optional, Any
 import logging
 from dataclasses import dataclass
-from utils.athena_rds_client import ejecutar_query_rds
+from db.athena_rds_client import ejecutar_query_rds
 #from utils.athena_rds_client_ssh import ejecutar_query_rds
 # Configurar logging
 logging.basicConfig(level=logging.INFO)
