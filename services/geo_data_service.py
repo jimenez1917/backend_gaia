@@ -1,14 +1,12 @@
+# services/geo_data_service.py
 from shapely import wkb
 import geopandas as gpd
 from typing import Dict, Optional, Any
-import logging
 from dataclasses import dataclass
-from db.athena_rds_client import ejecutar_query_rds
-#from utils.athena_rds_client_ssh import ejecutar_query_rds
-# Configurar logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from db.connections import DatabaseConnection
+from db.logger import setup_logger
 
+logger = setup_logger("geo_service")
 
 @dataclass
 class GeoJSONFeatureCollection:
@@ -33,21 +31,17 @@ class GeoJSONFeatureCollection:
             "features": self.features
         }
 
-
 class GeoDataService:
     def __init__(self):
-        self.logger = logging.getLogger(__name__)
+        self.db = DatabaseConnection()
+        self.logger = setup_logger(self.__class__.__name__)
 
     def _execute_geo_query(self, query: str, entity_name: str) -> Optional[gpd.GeoDataFrame]:
-        """
-        Ejecuta una consulta geográfica y devuelve un GeoDataFrame.
-        """
         try:
-            result = ejecutar_query_rds(query)
-            if result is None:
+            result = self.db.rds.execute_query(query)
+            if result.empty:
                 raise ValueError(f"No se obtuvieron datos para {entity_name}")
 
-            # Convertir la columna geometry de WKB a objetos shapely
             result['geometry'] = result['geometry'].apply(
                 lambda x: wkb.loads(bytes.fromhex(x))
             )
@@ -58,9 +52,6 @@ class GeoDataService:
             raise
 
     def get_comunas_corregimientos(self) -> gpd.GeoDataFrame:
-        """
-        Obtiene GeoDataFrame de comunas y corregimientos desde RDS PostgreSQL.
-        """
         query = """
             SELECT 
                 geom as geometry,
@@ -70,9 +61,6 @@ class GeoDataService:
         return self._execute_geo_query(query, "comunas y corregimientos")
 
     def get_estaciones(self) -> gpd.GeoDataFrame:
-        """
-        Obtiene GeoDataFrame de estaciones desde RDS PostgreSQL.
-        """
         query = """
             SELECT 
                 geom as geometry,
@@ -82,11 +70,8 @@ class GeoDataService:
         return self._execute_geo_query(query, "estaciones")
 
     def _create_feature_collection(self,
-                                   gdf: gpd.GeoDataFrame,
-                                   property_mappings: Dict[str, str]) -> GeoJSONFeatureCollection:
-        """
-        Crea una colección de features GeoJSON a partir de un GeoDataFrame.
-        """
+                                 gdf: gpd.GeoDataFrame,
+                                 property_mappings: Dict[str, str]) -> GeoJSONFeatureCollection:
         feature_collection = GeoJSONFeatureCollection()
 
         for _, row in gdf.iterrows():
@@ -102,28 +87,19 @@ class GeoDataService:
         return feature_collection
 
     def get_base_geometries(self) -> Dict[str, Any]:
-        """
-        Obtiene y formatea todas las geometrías base.
-        """
         try:
-            # Obtener datos
             comunas_gdf = self.get_comunas_corregimientos()
             estaciones_gdf = self.get_estaciones()
 
-            # Crear colecciones de features
-            comunas_collection = self._create_feature_collection(
-                comunas_gdf,
-                {"nombre": "nombre"}
-            )
-
-            estaciones_collection = self._create_feature_collection(
-                estaciones_gdf,
-                {"ESTACIO": "estacion"}
-            )
-
             return {
-                "comunas_corregimientos": comunas_collection.to_dict(),
-                "estaciones": estaciones_collection.to_dict()
+                "comunas_corregimientos": self._create_feature_collection(
+                    comunas_gdf,
+                    {"nombre": "nombre"}
+                ).to_dict(),
+                "estaciones": self._create_feature_collection(
+                    estaciones_gdf,
+                    {"ESTACIO": "estacion"}
+                ).to_dict()
             }
 
         except Exception as e:
@@ -131,32 +107,22 @@ class GeoDataService:
             raise
 
     def get_simplified_geometries(self, tolerance: float = 0.0001) -> Dict[str, Any]:
-        """
-        Obtiene geometrías simplificadas para mejor rendimiento.
-        """
         try:
-            # Obtener datos
             comunas_gdf = self.get_comunas_corregimientos()
             estaciones_gdf = self.get_estaciones()
 
-            # Simplificar geometrías
             comunas_gdf.geometry = comunas_gdf.geometry.simplify(tolerance)
             estaciones_gdf.geometry = estaciones_gdf.geometry.simplify(tolerance)
 
-            # Crear colecciones de features
-            comunas_collection = self._create_feature_collection(
-                comunas_gdf,
-                {"nombre": "nombre"}
-            )
-
-            estaciones_collection = self._create_feature_collection(
-                estaciones_gdf,
-                {"ESTACIO": "estacion"}
-            )
-
             return {
-                "comunas_corregimientos": comunas_collection.to_dict(),
-                "estaciones": estaciones_collection.to_dict()
+                "comunas_corregimientos": self._create_feature_collection(
+                    comunas_gdf,
+                    {"nombre": "nombre"}
+                ).to_dict(),
+                "estaciones": self._create_feature_collection(
+                    estaciones_gdf,
+                    {"ESTACIO": "estacion"}
+                ).to_dict()
             }
 
         except Exception as e:
