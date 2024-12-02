@@ -1,10 +1,9 @@
-from shapely import wkb
-import geopandas as gpd
-#from utils.athena_rds_client_ssh import ejecutar_query_rds
-from db.athena_rds_client import ejecutar_query_rds
-
+from db.queries import DatabaseQueries
 
 class CamarasService:
+    def __init__(self):
+        self.db_queries = DatabaseQueries()
+
     def get_camaras(self):
         """Obtiene ubicaciones de cámaras desde RDS PostgreSQL"""
         query = """
@@ -14,21 +13,21 @@ class CamarasService:
             FROM shapes.camaras_2024
             WHERE ST_Y(ST_Transform(geom, 4326)) != 0;
         """
-        result = ejecutar_query_rds(query)
-
-        if result is not None:
-            # Convertir a formato de puntos para el mapa
-            points = []
-            for _, row in result.iterrows():
-                point = {
+        try:
+            result = self.db_queries.execute_rds_query(query)
+            
+            points = [
+                {
                     'longitude': float(row['longitude']),
                     'latitude': float(row['latitude'])
                 }
-                points.append(point)
+                for _, row in result.iterrows()
+            ]
 
             return {
                 'type': 'PointCollection',
                 'points': points
             }
-        else:
+        except Exception as e:
+            print(f"Error getting cameras data: {e}")
             raise Exception("Error obteniendo datos de cámaras desde RDS")
