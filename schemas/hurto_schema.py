@@ -1,19 +1,7 @@
-# models/schemas/hurto_schema.py
 from pydantic import BaseModel
-from typing import Dict, List, Optional
 from datetime import date
+from typing import Dict, List, Any
 
-class HurtoBase(BaseModel):
-    cuadrante_pol: str
-    sede_receptora: str
-    jornada: str
-    sexo: str
-    modalidad: str
-    total_cantidad: int
-
-class HurtoData(BaseModel):
-    cuadrante_pol: str
-    total_cantidad: int
 
 class HurtoMetadata(BaseModel):
     tipo_hurto: str
@@ -23,6 +11,5 @@ class HurtoMetadata(BaseModel):
     total_registros: int
 
 class HurtoResponse(BaseModel):
-    hoverdata: List[HurtoBase]
-    data: List[HurtoData]
+    data: Dict[str, Any]
     metadata: HurtoMetadata

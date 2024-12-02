@@ -1,8 +1,8 @@
-from db.queries import DatabaseQueries
+from db.connections import DatabaseConnection
 
 class CamarasService:
     def __init__(self):
-        self.db_queries = DatabaseQueries()
+        self.db_queries = DatabaseConnection()
 
     def get_camaras(self):
         """Obtiene ubicaciones de cámaras desde RDS PostgreSQL"""

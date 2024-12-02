@@ -5,6 +5,7 @@ from typing import Dict, Optional, Any
 from dataclasses import dataclass
 from db.connections import DatabaseConnection
 from db.logger import setup_logger
+from models.geo import FeatureCollectionModel, FeatureModel
 
 logger = setup_logger("geo_service")
 
@@ -41,12 +42,10 @@ class GeoDataService:
             result = self.db.rds.execute_query(query)
             if result.empty:
                 raise ValueError(f"No se obtuvieron datos para {entity_name}")
-
             result['geometry'] = result['geometry'].apply(
                 lambda x: wkb.loads(bytes.fromhex(x))
             )
             return gpd.GeoDataFrame(result, geometry='geometry')
-
         except Exception as e:
             self.logger.error(f"Error al obtener {entity_name}: {str(e)}")
             raise
@@ -69,22 +68,16 @@ class GeoDataService:
         """
         return self._execute_geo_query(query, "estaciones")
 
-    def _create_feature_collection(self,
-                                 gdf: gpd.GeoDataFrame,
-                                 property_mappings: Dict[str, str]) -> GeoJSONFeatureCollection:
-        feature_collection = GeoJSONFeatureCollection()
-
+    def _create_feature_collection(self, gdf: gpd.GeoDataFrame, property_mappings: Dict[str, str]) -> FeatureCollectionModel:
+        features = []
         for _, row in gdf.iterrows():
-            properties = {
-                new_key: row[old_key]
-                for new_key, old_key in property_mappings.items()
-            }
-            feature_collection.add_feature(
+            properties = {new_key: row[old_key] for new_key, old_key in property_mappings.items()}
+            feature = FeatureModel(
                 geometry=row.geometry.__geo_interface__,
                 properties=properties
             )
-
-        return feature_collection
+            features.append(feature)
+        return FeatureCollectionModel(features=features)
 
     def get_base_geometries(self) -> Dict[str, Any]:
         try:
@@ -106,7 +99,7 @@ class GeoDataService:
             self.logger.error(f"Error en get_base_geometries: {str(e)}")
             raise
 
-    def get_simplified_geometries(self, tolerance: float = 0.0001) -> Dict[str, Any]:
+    def get_simplified_geometries(self, tolerance: float = 0.0001):
         try:
             comunas_gdf = self.get_comunas_corregimientos()
             estaciones_gdf = self.get_estaciones()
@@ -118,13 +111,12 @@ class GeoDataService:
                 "comunas_corregimientos": self._create_feature_collection(
                     comunas_gdf,
                     {"nombre": "nombre"}
-                ).to_dict(),
+                ),
                 "estaciones": self._create_feature_collection(
                     estaciones_gdf,
-                    {"ESTACIO": "estacion"}
-                ).to_dict()
+                    {"estacion": "estacion"}
+                )
             }
-
         except Exception as e:
             self.logger.error(f"Error en get_simplified_geometries: {str(e)}")
             raise

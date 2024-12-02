@@ -1,4 +1,3 @@
-# backend/models/schemas/geo_data.py
 from pydantic import BaseModel
 from typing import Dict, Any, List, Optional
 
@@ -33,6 +32,3 @@ class CuadranteProperties(BaseModel):
     porcentajes_genero: Dict[str, float]
     type: str = "cuadrante"
     style: Dict[str, Any]
-
-class CuadrantesResponse(GeoJsonResponse):
-    pass
