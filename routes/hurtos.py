@@ -1,6 +1,5 @@
 from fastapi import APIRouter, HTTPException, Query, Depends
 from datetime import date
-from typing import Optional
 from services.hurtos_service import HurtosService
 from services.map_service import MapService
 from models.hurtos import HurtoCollection

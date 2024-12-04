@@ -1,22 +1,17 @@
-# routes/percepcion.py
-from fastapi import APIRouter, HTTPException
-from typing import List, Dict
+from fastapi import APIRouter, HTTPException, Depends, Query
 from services.percepcion_service import PercepcionService
-from models.percepcion import PercepcionModel
+from schemas.percepcion import PercepcionResponse
 
-router = APIRouter(
-    prefix="/percepcion",
-    tags=["Percepcion"]
-)
+router = APIRouter(prefix="/percepcion", tags=["Percepcion"])
 
-percepcion_model = PercepcionModel()
-percepcion_service = PercepcionService(percepcion_model)
-
-@router.get("/pregunta/", response_model=List[Dict[str, float]])
-async def get_percepcion(p: str):
-    try:
-        return percepcion_service.get_percepcion_data(p)
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail="Error interno del servidor")
+@router.get("/pregunta/", response_model=PercepcionResponse)
+async def get_percepcion(
+   p: str = Query(..., description="Pregunta a consultar"),
+   percepcion_service: PercepcionService = Depends(lambda: PercepcionService())
+) -> PercepcionResponse:
+   try:
+       return percepcion_service.get_percepcion_data(p)
+   except ValueError as e:
+       raise HTTPException(status_code=400, detail=str(e))
+   except Exception as e:
+       raise HTTPException(status_code=500, detail=str(e))
